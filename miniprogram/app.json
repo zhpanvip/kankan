@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#409EFF",
+    "navigationBarTitleText": "看看作文",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#BFBFBF",
+    "selectedColor": "#409EFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/icon/home_normal.png",
+        "selectedIconPath":"images/icon/home_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "个人中心",
+        "iconPath":"images/icon/me_normal.png",
+        "selectedIconPath": "images/icon/me_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

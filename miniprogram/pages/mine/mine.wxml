@@ -1,0 +1,3 @@
+<view class="home_container" style="display:{{isHidden ? 'none' : ''}}">
+
+</view>
