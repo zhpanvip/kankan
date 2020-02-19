@@ -1,25 +1,32 @@
-<view class="home_container" style="display:{{isHidden ? 'none' : ''}}">
+<view class="home_container">
   <!--轮播图-->
   <swiper wx:if="{{bannerData.length>0}}" class="swiper_container" autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}" duration="1000" indicator-color="#BFBFBF" indicator-active-color="#409EFF" >
    <block wx:for="{{bannerData}}" wx:key="*this">
           <swiper-item bind:tap="jumpToWebView">
-            <image class="swiper_item {{item}}" src="{{item.imageUrl}}"/>
+            <image class="swiper_item" src="{{item.imageUrl}}"/>
           </swiper-item>
         </block>
   </swiper>
 
-    <!--未加载时的占位列表-->
-  <view wx:for="{{5}}" wx:if="{{!loadingSuccess}}" wx:key="{{index}}">
-    <view class="list-wrapper">
-      <view class="list-wrapper-content">
-        <view class="story-list-right">
+    <!--占位列表-->
+  <view wx:for="{{6}}" wx:if="{{!loadingSuccess}}" wx:key="*this">
+    <view class="list_wrapper">
+        <view class="story_list_right">
           <view class="no_data_top_view" />
           <view class="no_data_mid_view" />
           <view class="no_data_mid_view" />
           <view class="no_data_bottom_view" />
         </view>
-      </view>
-      <view class="split-line" />
+      <view class="split_line" />
+    </view>
+  </view>
+
+  <!--文章列表-->
+  <view wx:for="{{writings}}" wx:key="*this">
+    <view class="writings_list_wrapper">
+      <view class="writing_list_title">{{item.title}}</view>
+      <view class="writing_list_content">{{item.shortContent}}</view>
+      <view class="split_line" />
     </view>
   </view>
 </view>
