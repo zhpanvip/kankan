@@ -9,6 +9,12 @@
   justify-content: space-between;
 } 
 
+.split_line {
+  width: 718rpx;
+  height: 0.8px;
+  background: rgba(0, 0, 0, 0.10);
+  opacity: 0.3;
+}
 
 button {
   background: initial;

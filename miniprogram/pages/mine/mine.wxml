@@ -1,3 +1,19 @@
 <view class="home_container" style="display:{{isHidden ? 'none' : ''}}">
-
+  <view class="user_info_view">
+    <image class="avatar" src="../../images/icon/default_avatar.png"></image>
+    <view class="user_grade_text">年级</view>
+    <view class="username_text">username</view>
+  </view>
+  <view class="mine_collect_view">
+    <image class="img_mine_collect" src="../../images/icon/mine_collect.png"></image>
+    <view class="mine_collect_text">我的收藏</view>
+    <image class="img_arrow_right" src="../../images/icon/arrow_right.png"></image>
+  </view>
+<view class="split_line" />
+  <view class="mine_collect_view">
+    <image class="img_mine_collect" src="../../images/icon/mine_thumb_up.png"></image>
+    <view class="mine_collect_text">我的点赞</view>
+    <image class="img_arrow_right" src="../../images/icon/arrow_right.png"></image>
+  </view>
+  <view class="split_line" />
 </view>

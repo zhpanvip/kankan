@@ -1,22 +1,26 @@
 <view class="home_container">
+  <view class="home_top_view">
+
+  </view>
+
   <!--轮播图-->
-  <swiper wx:if="{{bannerData.length>0}}" class="swiper_container" autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}" duration="1000" indicator-color="#BFBFBF" indicator-active-color="#409EFF" >
-   <block wx:for="{{bannerData}}" wx:key="*this">
-          <swiper-item bind:tap="jumpToWebView">
-            <image class="swiper_item" src="{{item.imageUrl}}"/>
-          </swiper-item>
-        </block>
+  <swiper wx:if="{{bannerData.length>0}}" class="swiper_container" autoplay="{{true}}" circular="{{true}}" indicator-dots="{{bannerData.length>1}}" duration="1000" indicator-color="#BFBFBF" indicator-active-color="#409EFF">
+    <block wx:for="{{bannerData}}" wx:key="*this">
+      <swiper-item bind:tap="jumpToWebView">
+        <image class="swiper_item" src="{{item.imageUrl}}" />
+      </swiper-item>
+    </block>
   </swiper>
 
-    <!--占位列表-->
+  <!--占位列表-->
   <view wx:for="{{6}}" wx:if="{{!loadingSuccess}}" wx:key="*this">
     <view class="list_wrapper">
-        <view class="story_list_right">
-          <view class="no_data_top_view" />
-          <view class="no_data_mid_view" />
-          <view class="no_data_mid_view" />
-          <view class="no_data_bottom_view" />
-        </view>
+      <view class="story_list_right">
+        <view class="no_data_top_view" />
+        <view class="no_data_mid_view" />
+        <view class="no_data_mid_view" />
+        <view class="no_data_bottom_view" />
+      </view>
       <view class="split_line" />
     </view>
   </view>
@@ -26,7 +30,20 @@
     <view class="writings_list_wrapper">
       <view class="writing_list_title">{{item.title}}</view>
       <view class="writing_list_content">{{item.shortContent}}</view>
-      <view class="split_line" />
+      <view class="wrting_list_bottom">
+        <view class="writing_data_count">
+          <image class="img_writing_count" src="../../images/icon/reading.png" />
+          <text class="wrtings_count_text">{{item.readingCount}}</text>
+          <image class="img_writing_count" src="../../images/icon/collect_gray.png" />
+          <text class="wrtings_count_text">{{item.collectCount}}</text>
+          <image class="img_writing_count" src="../../images/icon/thumb_up_gray.png" />
+          <text class="wrtings_count_text">{{item.thumbUpCount}}</text>
+        </view>
+        <view class="writing_lables" wx:key="*this">
+          <view class="lable" wx:for="{{item.writingLabels}}">{{item}}</view>
+        </view>
+      </view>
     </view>
+    <view class="split_line" />
   </view>
 </view>
