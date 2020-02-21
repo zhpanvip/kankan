@@ -22,116 +22,39 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
-.list_wrapper_content {
+.navigation_bar{
   width: 100%;
-  height: 194rpx;
+  background: #409EFF;
+   position: fixed;
+  z-index: 999;
+}
+.nav_bar_content{
   display: flex;
   align-items: center;
+  height: 100rpx;
 }
-
-.story_list_right {
+.nav_title{
+  color: white;
+  font-size: 36rpx;
+  margin-left: 32rpx;
+}
+.nav_search{
   display: flex;
-  flex-direction: column;
-  margin-top: 32rpx;
-  height: 157.4rpx;
-  flex: 1;
+  align-items: center;
+  width: 280rpx;
+  margin-left: 32rpx;
+  background: #FFFFFF;
+  border-radius: 100rpx;
+  line-height: 60rpx;
+  padding-left: 16rpx;
+  margin-top: 10rpx;
 }
-
-.no_data_top_view {
-  width: 350rpx;
-  height: 35rpx;
-  background: #e8e8e8;
-}
-
-.no_data_mid_view {
-  width: 100%;
-  height: 24rpx;
-  margin-top: 16rpx;
-  background: #e8e8e8;
-}
-
-.no_data_bottom_view {
-  width: 256rpx;
-  height: 22rpx;
-  margin-top: 26rpx;
-  background: #e8e8e8;
-}
-
-.writing_list_title {
-  font-size: 32rpx;
-  width: 442rpx;
-  letter-spacing: 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  height: 44rpx;
-  padding-top: 20rpx;
-  line-height: 44rpx;
-  margin-top: 6rpx;
-  padding-bottom: 10rpx;
-  overflow: hidden;
-}
-
-.writing_list_content {
+.nav_search_text{
   font-size: 28rpx;
-  color: rgba(0, 0, 0, 0.35);
-  letter-spacing: 0;
-  word-break: break-all;
-  display: -webkit-box;
-  line-height: 50rpx;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
-.writings_list_wrapper {
-  padding-left: 32rpx;
-  padding-right: 32rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.wrting_list_bottom {
-  display: flex;
-  height: 60rpx;
-  align-items: center;
-}
-
-.writing_data_count {
-  margin-top: 10rpx;
-  align-items: center;
-  margin-bottom: 10rpx;
-  display: flex;
-}
-
-.img_writing_count {
-  width: 30rpx;
-  height: 30rpx;
-}
-
-.wrtings_count_text {
-  font-size: 24rpx;
-  color: rgba(0, 0, 0, 0.35);
-  margin-right: 20rpx;
-  margin-left: 5rpx;
-}
-
-.writing_lables {
-  margin-top: 10rpx;
-  margin-left: auto;
-  display: flex
-}
-
-.lable {
-  font-size: 24rpx;
-  color: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgb(191, 191, 191);
-  border-radius: 8rpx;
+  color: #BFBFBF;
   margin-left: 10rpx;
-  padding-left: 8rpx;
-  padding-right: 8rpx;
-  text-align: center;
+}
+.nav_search_icon{
+  height: 30rpx;
+  width: 30rpx;
 }

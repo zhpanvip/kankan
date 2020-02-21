@@ -1,6 +1,20 @@
 <view class="home_container">
-  <view class="home_top_view">
 
+  <view class="navigation_bar">
+    <view class="status_bar" style="height:{{statusBarHeight}}px"></view>
+    <view class="nav_bar_content">
+      <text class="nav_title">看看作文</text>
+      <view class="nav_search" bindtap="toSearch">
+        <image class="nav_search_icon" src="../../images/icon/search.png"></image>
+        <text class="nav_search_text">搜索作文</text>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view style="height:{{statusBarHeight}}px"></view>
+    <view class="nav_bar_content">
+    </view>
   </view>
 
   <!--轮播图-->
@@ -27,23 +41,6 @@
 
   <!--文章列表-->
   <view wx:for="{{writings}}" wx:key="*this">
-    <view class="writings_list_wrapper">
-      <view class="writing_list_title">{{item.title}}</view>
-      <view class="writing_list_content">{{item.shortContent}}</view>
-      <view class="wrting_list_bottom">
-        <view class="writing_data_count">
-          <image class="img_writing_count" src="../../images/icon/reading.png" />
-          <text class="wrtings_count_text">{{item.readingCount}}</text>
-          <image class="img_writing_count" src="../../images/icon/collect_gray.png" />
-          <text class="wrtings_count_text">{{item.collectCount}}</text>
-          <image class="img_writing_count" src="../../images/icon/thumb_up_gray.png" />
-          <text class="wrtings_count_text">{{item.thumbUpCount}}</text>
-        </view>
-        <view class="writing_lables" wx:key="*this">
-          <view class="lable" wx:for="{{item.writingLabels}}">{{item}}</view>
-        </view>
-      </view>
-    </view>
-    <view class="split_line" />
+    <writing_item writing="{{item}}" data-id="{{index}}" bindtap="onItemClick"></writing_item>
   </view>
 </view>

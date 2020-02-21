@@ -1,0 +1,7 @@
+<!--miniprogram/pages/my-collect/my-collect.wxml-->
+<view class="container">
+ <!--文章列表-->
+  <view wx:for="{{writings}}" wx:key="*this">
+    <writing_item writing="{{item}}" data-id="{{index}}" bindtap="onItemClick"></writing_item>
+  </view>
+</view>

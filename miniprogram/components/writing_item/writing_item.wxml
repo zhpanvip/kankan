@@ -1,0 +1,21 @@
+<!--components/writing_item/writing_item.wxml-->
+<view>
+  <view class="writings_list_wrapper">
+    <view class="writing_list_title">{{writing.title}}</view>
+    <view class="writing_list_content">{{writing.shortContent}}</view>
+    <view class="wrting_list_bottom">
+      <view class="writing_data_count">
+        <image class="img_writing_count" src="../../images/icon/reading.png" />
+        <text class="wrtings_count_text">{{writing.readingCount}}</text>
+        <image class="img_writing_count" src="../../images/icon/collect_gray.png" />
+        <text class="wrtings_count_text">{{writing.collectCount}}</text>
+        <image class="img_writing_count" src="../../images/icon/thumb_up_gray.png" />
+        <text class="wrtings_count_text">{{writing.thumbUpCount}}</text>
+      </view>
+      <view class="writing_lables" wx:key="*this">
+        <view class="lable" wx:for="{{writing.writingLabels}}">{{item}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="split_line" />
+</view>

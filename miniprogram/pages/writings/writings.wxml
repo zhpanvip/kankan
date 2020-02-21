@@ -1,0 +1,23 @@
+<!--miniprogram/pages/writings/writings.wxml-->
+<view class="container">
+  <text class="writing_title_text">{{writing.title}}</text>
+  <text class="writing_content">{{writing.writingContent}}</text>
+
+  <view class="bottom">
+
+    <view class="bottom_item">
+      <image class="item_img" src="{{writing.isCollected ? '../../images/icon/collect_fill.png' : '../../images/icon/collect.png'}}" />
+      <text class="item_text">{{writing.collectCount}}</text>
+    </view>
+
+    <view class="bottom_item">
+      <image class="item_img" src="{{writing.isThumbUp ? '../../images/icon/thumb_up_fill.png' : '../../images/icon/thumb_up.png'}}" />
+      <text class="item_text">{{writing.thumbUpCount}}</text>
+    </view>
+
+    <view class="bottom_item">
+      <image class="item_img" src="../../images/icon/reading.png" />
+      <text class="item_text">{{writing.readingCount}}</text>
+    </view>
+  </view>
+</view>

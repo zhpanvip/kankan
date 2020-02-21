@@ -1,6 +1,6 @@
 {
+  "navigationBarTitleText": "我的收藏",
   "usingComponents": {
     "writing_item": "/components/writing_item/writing_item"
-  },
-  "navigationStyle": "custom"
+  }
 }
