@@ -1,5 +1,12 @@
 /* miniprogram/pages/writings/writings.wxss */
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32rpx 0;
+} 
+
 .writing_title_text {
   font-size: 38rpx;
   font-style: bold;

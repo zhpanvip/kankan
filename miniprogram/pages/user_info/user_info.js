@@ -1,48 +1,11 @@
-// miniprogram/pages/search/search.js
+// miniprogram/pages/user_info/user_info.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    primarySchool: [{
-      labelName: "小学",
-      lableCode: 100,
-      isSelected: true
-    }, {
-      labelName: "一年级",
-      lableCode: 100
-    }, {
-      labelName: "二年级",
-      lableCode: 100
-    }, {
-      labelName: "三年级",
-      lableCode: 100
-    }, {
-      labelName: "四年级",
-      lableCode: 100
-    }, {
-      labelName: "五年级",
-      lableCode: 100
-    }, {
-      labelName: "六年级",
-      lableCode: 100
-    }],
-    juniorSchool: [],
-    highSchool: [],
-  },
 
-  onSearch: function (view) {
-    wx.showToast({
-      title: 'Search',
-      icon: '',
-      image: '',
-      duration: 1000,
-      mask: true,
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
   },
 
   /**

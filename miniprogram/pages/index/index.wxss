@@ -33,17 +33,14 @@
   align-items: center;
   height: 100rpx;
 }
-.nav_title{
-  color: white;
-  font-size: 36rpx;
-  margin-left: 32rpx;
-}
+
 .nav_search{
   display: flex;
   align-items: center;
-  width: 280rpx;
+  width: 60%;
   margin-left: 32rpx;
   background: #FFFFFF;
+  opacity: 0.8;
   border-radius: 100rpx;
   line-height: 60rpx;
   padding-left: 16rpx;

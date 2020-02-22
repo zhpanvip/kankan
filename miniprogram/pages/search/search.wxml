@@ -1,2 +1,37 @@
 <!--miniprogram/pages/search/search.wxml-->
-<text>miniprogram/pages/search/search.wxml</text>
+<view class="container">
+  <view class="serch_container">
+    <view class="search_view" bindtap="toSearch">
+      <image class="search_icon" src="../../images/icon/search.png"></image>
+      <input class="input_text" confirm-type="search" auto-focus="{{true}}" placeholder-style="color:#BFBFBF" placeholder="输入关键字搜索作文" bindconfirm="onSearch" maxlength="20"></input>
+      <view class="line"></view>
+
+      <text class="search_text" bindtap="onSearch">搜索</text>
+    </view>
+
+    <view class="lable_container">
+      <view class="search_lable">
+        <text class="lable_text">年级</text>
+        <image class="lable_icon" src="../../images/icon/search_lable_icon.png"></image>
+      </view>
+      <view class="search_lable">
+        <text class="lable_text">字数</text>
+        <image class="lable_icon" src="../../images/icon/search_lable_icon.png"></image>
+      </view>
+      <view class="search_lable">
+        <text class="lable_text">体裁</text>
+        <image class="lable_icon" src="../../images/icon/search_lable_icon.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="split_line" />
+
+  <view class="grade_container">
+    <text wx:if="{{primarySchool.length>0}}" class="label_title">小学</text>
+    <lable_grid lables="{{primarySchool}}" />
+    <text wx:if="{{juniorSchool.length>0}}" class="label_title">初中</text>
+    <lable_grid lables="{{juniorSchool}}" />
+    <text wx:if="{{highSchool.length>0}}" class="label_title">高中</text>
+    <lable_grid lables="{{highSchool}}" />
+  </view>
+</view>

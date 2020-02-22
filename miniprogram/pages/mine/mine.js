@@ -20,6 +20,12 @@ Page({
     })
   },
 
+  toUserInfo:function(view){
+    wx.navigateTo({
+      url: `../user_info/user_info`
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

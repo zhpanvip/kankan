@@ -1,0 +1,6 @@
+<!--components/lable_grid/lable_grid.wxml-->
+<view class="lable_container">
+  <block wx:for="{{lables}}">
+    <text class="{{item.isSelected?'lable_view_selected':'lable_view'}}">{{item.labelName}}</text>
+  </block>
+</view>

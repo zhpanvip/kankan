@@ -1,5 +1,5 @@
 <view class="home_container" style="display:{{isHidden ? 'none' : ''}}">
-  <view class="user_info_view">
+  <view class="user_info_view" bindtap="toUserInfo">
     <image class="avatar" src="../../images/icon/default_avatar.png"></image>
     <view class="user_grade_text">{{userInfo.grade}}</view>
     <view class="username_text">{{userInfo.username}}</view>

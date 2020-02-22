@@ -1,0 +1,35 @@
+/* components/lable_grid/lable_grid.wxss */
+.lable_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.lable_view {
+  font-size: 24rpx;
+  color: #BFBFBF;
+  border: 1px solid #BFBFBF;
+  border-radius: 100rpx;
+  margin-left: 10rpx;
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  margin-top: 16rpx;
+  text-align: center;
+}
+
+.lable_view_selected{
+  font-size: 24rpx;
+  color: #409EFF;
+  border: 1px solid #409EFF;
+  border-radius: 100rpx;
+  margin-left: 10rpx;
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  margin-top: 16rpx;
+  text-align: center;
+}

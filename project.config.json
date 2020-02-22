@@ -64,6 +64,24 @@
 					"pathName": "pages/my-collect/my-collect",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "Search",
+					"pathName": "pages/search/search",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Writings",
+					"pathName": "pages/writings/writings",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/test",
+					"scene": null
 				}
 			]
 		}

@@ -5,10 +5,12 @@
     "pages/writings/writings",
     "pages/my-collect/my-collect",
     "components/writing_item/writing_item",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/user_info/user_info",
+    "pages/test/test"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#FFFFFF",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#409EFF",
     "navigationBarTitleText": "看看作文",
