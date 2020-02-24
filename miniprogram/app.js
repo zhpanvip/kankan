@@ -1,4 +1,6 @@
 //app.js
+import {setUserInfo,getUserInfo} from "./utils/UserInfoTools";
+import { isNullObject } from "./utils/EmptyUtils";
 App({
   onLaunch: function() {
     if (!wx.cloud) {
@@ -16,10 +18,13 @@ App({
     this.globalData = {
       statusBarHeight: 0,
     }
+    if(isNullObject(getUserInfo())){
+      setUserInfo({});
+    }
     let menuButtonObject = wx.getMenuButtonBoundingClientRect();
     wx.getSystemInfo({
       success: res => {
-         //状态栏高度
+        //状态栏高度
         this.globalData.statusBarHeight = res.statusBarHeight;
       },
       fail(err) {

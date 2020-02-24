@@ -1,19 +1,11 @@
-// miniprogram/pages/user_info/user_info.js
-import {getUserInfo} from "../../utils/UserInfoTools";
-
+// miniprogram/pages/test/test.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      userInfo:getUserInfo(),
-  },
 
-  toSelectGrade:function(view){
-    wx.navigateTo({
-      url: `../select_grade/select_grade`
-    })
   },
 
   /**

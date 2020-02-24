@@ -7,7 +7,8 @@
     "components/writing_item/writing_item",
     "pages/search/search",
     "pages/user_info/user_info",
-    "pages/test/test"
+    "pages/test/test",
+    "pages/select_grade/select_grade"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",

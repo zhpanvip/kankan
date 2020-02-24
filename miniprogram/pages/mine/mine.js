@@ -1,11 +1,13 @@
 // miniprogram/pages/mine/mine.js
+import {getUserInfo} from "../../utils/UserInfoTools";
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo:{username:"LaLaLa",grade:"三年级"},
+    userInfo:getUserInfo(),
   },
 
   toMyCollect: function(view) {
@@ -26,11 +28,16 @@ Page({
     })
   },
 
+  toSelectGrade:function(){
+    wx.navigateTo({
+      url: `../select_grade/select_grade`
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-   
   },
 
   /**

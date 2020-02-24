@@ -1,1 +1,23 @@
 /* miniprogram/pages/user_info/user_info.wxss */
+.user_info_view {
+  display: flex;
+  height: 300rpx;
+  background: #409eff;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.avatar {
+  margin-left: 32rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.username_text {
+  padding-bottom: 15rpx;
+  color: white;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  font-size: 40rpx;
+}

@@ -10,7 +10,6 @@
 }
 
 .avatar {
-  margin-left: 32rpx;
   width: 150rpx;
   height: 150rpx;
 }
@@ -18,8 +17,7 @@
 .username_text {
   padding-bottom: 15rpx;
   color: white;
-  margin-left: 20rpx;
-  margin-top: 10rpx;
+  margin-top: 15rpx;
   font-size: 36rpx;
 }
 
@@ -33,33 +31,9 @@
   color: white;
   padding-left: 15rpx;
   padding-right: 15rpx;
+  padding-top: 3rpx;
+  padding-bottom: 3rpx;
   margin-top: 16rpx;
-  margin-left: 20rpx;
 }
 
-.mine_collect_view {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  height: 90rpx;
-  background: white;
-  padding-left: 32rpx;
-  padding-right: 32rpx;
-}
 
-.img_mine_collect {
-  width: 40rpx;
-  height: 40rpx;
-}
-
-.img_arrow_right {
-  margin-left: auto;
-  width: 50rpx;
-  height: 50rpx;
-}
-
-.mine_collect_text {
-  color: #bfbfbf;
-  font-size: 32rpx;
-  margin-left: 20rpx;
-}

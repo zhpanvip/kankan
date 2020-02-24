@@ -1,2 +1,9 @@
 <!--miniprogram/pages/user_info/user_info.wxml-->
-<text>miniprogram/pages/user_info/user_info.wxml</text>
+<view>
+  <view class="user_info_view" bindtap="toUserInfo">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <item-view text="昵称" rightText="{{userInfo.username}}" />
+  <view class="split_line" />
+  <item-view text="年级" bindtap="toSelectGrade" rightText="{{userInfo.grade}}" />
+</view>

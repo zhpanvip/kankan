@@ -1,4 +1,5 @@
 export const Constants = {
   ENV: 'prod', //  服务器环境配置
   SERVER_KEY:'RGa4ab39HgkJ3wMb',
+  KEY_USER_INFO:"user_info",
 }

@@ -1,19 +1,11 @@
 <view class="home_container" style="display:{{isHidden ? 'none' : ''}}">
-  <view class="user_info_view" bindtap="toUserInfo">
-    <image class="avatar" src="../../images/icon/default_avatar.png"></image>
-    <view class="user_grade_text">{{userInfo.grade}}</view>
-    <view class="username_text">{{userInfo.username}}</view>
+  <view class="user_info_view">
+    <image class="avatar" bindtap="toUserInfo" src="{{userInfo.avatarUrl}}"></image>
+    <view class="user_grade_text" wx:if="{{userInfo.grade}}" bindtap="toSelectGrade">{{userInfo.grade}}</view>
+    <view class="username_text" bindtap="toUserInfo">{{userInfo.username}}</view>
   </view>
-  <view class="mine_collect_view" bindtap="toMyCollect">
-    <image class="img_mine_collect" src="../../images/icon/mine_collect.png"></image>
-    <view class="mine_collect_text">我的收藏</view>
-    <image class="img_arrow_right" src="../../images/icon/arrow_right.png"></image>
-  </view>
-  <view class="split_line" wx:if="{{false}}" />
-  <view class="mine_collect_view" wx:if="{{false}}" bindtap="toMyLike">
-    <image class="img_mine_collect" src="../../images/icon/mine_thumb_up.png"></image>
-    <view class="mine_collect_text">我的点赞</view>
-    <image class="img_arrow_right" src="../../images/icon/arrow_right.png"></image>
-  </view>
-  <view class="split_line" />
+
+  <item-view bindtap="toMyCollect" text="我的收藏" leftIcon="../../images/icon/mine_collect.png" />
+  <item-view wx:if="{{false}}" bindtap="toMyLike" text="我的点赞" leftIcon="../../images/icon/mine_thumb_up.png" />
+
 </view>

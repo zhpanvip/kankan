@@ -4,7 +4,7 @@ import {
 import {
   Strings
 } from "../common/Strings";
-import {LogUtils} from "../utils/LogUtils";
+import {log} from "../utils/LogUtils";
 
 export class HttpReconstruction {
   constructor() {
@@ -47,7 +47,7 @@ export class HttpReconstruction {
         data: params.data,
         header: params.headers,
         success: (res) => {
-          LogUtils(res);
+          log(res);
           let {
             statusCode
           } = res;
@@ -61,7 +61,7 @@ export class HttpReconstruction {
           }
         },
         fail: (err) => {
-          LogUtils(err);
+          log(err);
           reject(err);
           wx.hideLoading();
           setTimeout(() => {

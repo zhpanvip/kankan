@@ -1,6 +1,6 @@
 import { ENV } from '../config/index.js'
 
-export const LogUtils = (str) => {
+export const log = (str) => {
   if (ENV === 'beta') {
     console.log(str)
   } else if (ENV === 'release') {

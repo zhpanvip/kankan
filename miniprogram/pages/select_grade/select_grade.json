@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "搜索作文",
+  "navigationBarTitleText": "选择班级",
   "usingComponents": {
     "lable_grid": "/components/lable_grid/lable_grid"
   }

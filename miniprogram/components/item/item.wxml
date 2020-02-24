@@ -1,0 +1,10 @@
+<!--components/item/item.wxml-->
+<view class="item_container" >
+  <image class="item_left_icon" wx:if="{{leftIcon.length>0}}" src="{{leftIcon}}"></image>
+  <view class="item_text">{{text}}</view>
+  <view class="item_right_container">
+      <text class="item_right_text">{{rightText}}</text>
+      <image class="item_right_icon" src="{{rightIcon}}"></image>
+  </view>
+  <view class="split_line"/>
+</view>
