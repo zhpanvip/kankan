@@ -1,4 +1,5 @@
 // components/lable_grid/lable_grid.js
+import {log} from "../../utils/LogUtils.js"
 Component({
   /**
    * 组件的属性列表
@@ -21,6 +22,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    _onItemClick:function(view){
+      const index = view.currentTarget.dataset.index;
+      const selecteLabel=this.properties.lables[index];
+      this.triggerEvent('itemClick',selecteLabel)
+    }
   }
 })

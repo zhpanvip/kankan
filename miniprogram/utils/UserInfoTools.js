@@ -8,15 +8,6 @@ export const setUserInfo = (userInfo) => {
   if (isEmptyString(userInfo.avatarUrl)) {
     userInfo.avatarUrl = "../../images/icon/default_avatar.png";
   }
-  if(isEmptyString(userInfo.userId)){
-    userInfo.username="未登录"
-  }
-  if (isEmptyString(userInfo.username)) {
-    userInfo.username = "未设置昵称"
-  }
-  if (isEmptyString(userInfo.grade)) {
-    userInfo.grade = "补充年级"
-  }
   wx.setStorageSync(Constants.KEY_USER_INFO, userInfo)
 };
 

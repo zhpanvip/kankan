@@ -5,5 +5,5 @@
   </view>
   <item-view text="昵称" rightText="{{userInfo.username}}" />
   <view class="split_line" />
-  <item-view text="年级" bindtap="toSelectGrade" rightText="{{userInfo.grade}}" />
+  <item-view text="年级" bindtap="toSelectGrade" rightText="{{userInfo.grade.labelName}}" />
 </view>

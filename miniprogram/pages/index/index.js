@@ -12,9 +12,12 @@ Page({
    */
   data: {
     bannerData: [{
-      imageUrl: "https://web-s3.alo7.com/public/wxtalesofchina/assets/img_banner_1_20190429134501.png",
+      imageUrl: "../../images/banner1.png",
       webUrl: ""
-    },],
+    }, {
+        imageUrl: "../../images/banner2.png",
+        webUrl: ""
+      }],
     writings: [{
       title: "你若盛开，清风自来",
       shortContent: "倪瓒曾曰：“兰生萧艾中，未尝损芳馨。”何也？深陷浮沤，兰也是兰，困于泥淖，莲还是莲。只因自身清雅难掩，清风便顺势而来。\n倪瓒曾曰：“兰生萧艾中，未尝损芳馨。”何也？深陷浮沤，兰也是兰，困于泥淖，莲还是莲。只因自身清雅难掩，清风便顺势而来。",

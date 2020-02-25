@@ -16,6 +16,10 @@ Page({
     })
   },
 
+  setUserGrade:function(selectedGrade){
+    this.data.userInfo.grade = selectedGrade;
+    this.setData({userInfo:this.data.userInfo})
+  },
   /**
    * 生命周期函数--监听页面加载
    */

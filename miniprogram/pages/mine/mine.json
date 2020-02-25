@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "个人中心",
   "usingComponents": {
-    "item-view": "/components/item/item"
+    "item-view": "/components/item_view/item_view"
   }
 }

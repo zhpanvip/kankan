@@ -5,7 +5,7 @@
     <view class="nav_bar_content">
       <view class="nav_search" bindtap="toSearch">
         <image class="nav_search_icon" src="../../images/icon/search.png"></image>
-        <text class="nav_search_text">输入关键字搜索作文</text>
+        <text class="nav_search_text">年级/字数/体裁/关键字搜索作文</text>
       </view>
     </view>
   </view>
@@ -18,15 +18,13 @@
 
   <!--轮播图-->
   <swiper wx:if="{{bannerData.length>0}}" class="swiper_container" autoplay="{{true}}" circular="{{true}}" indicator-dots="{{bannerData.length>1}}" duration="1000" indicator-color="#BFBFBF" indicator-active-color="#409EFF">
-    <block wx:for="{{bannerData}}" wx:key="*this">
-      <swiper-item bind:tap="jumpToWebView">
-        <image class="swiper_item" src="{{item.imageUrl}}" />
-      </swiper-item>
-    </block>
+    <swiper-item bind:tap="jumpToWebView" wx:for="{{bannerData}}" wx:key="*this">
+      <image class="swiper_item" src="{{item.imageUrl}}" />
+    </swiper-item>
   </swiper>
 
   <!--占位列表-->
-  <view wx:for="{{6}}" wx:if="{{!loadingSuccess}}" wx:key="*this">
+  <view class="no_data_container" wx:for="{{6}}" wx:if="{{!loadingSuccess}}" wx:key="*this">
     <view class="list_wrapper">
       <view class="story_list_right">
         <view class="no_data_top_view" />
@@ -39,7 +37,7 @@
   </view>
 
   <!--文章列表-->
-  <view wx:for="{{writings}}" wx:key="*this">
+  <view wx:if="{{loadingSuccess}}" wx:for="{{writings}}" wx:key="*this">
     <writing_item writing="{{item}}" data-id="{{index}}" bindtap="onItemClick"></writing_item>
   </view>
 </view>

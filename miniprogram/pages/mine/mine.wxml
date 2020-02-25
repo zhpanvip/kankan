@@ -1,7 +1,7 @@
 <view class="home_container" style="display:{{isHidden ? 'none' : ''}}">
   <view class="user_info_view">
     <image class="avatar" bindtap="toUserInfo" src="{{userInfo.avatarUrl}}"></image>
-    <view class="user_grade_text" wx:if="{{userInfo.grade}}" bindtap="toSelectGrade">{{userInfo.grade}}</view>
+    <view class="user_grade_text" wx:if="{{userInfo.grade.labelName}}" bindtap="toSelectGrade">{{userInfo.grade.labelName}}</view>
     <view class="username_text" bindtap="toUserInfo">{{userInfo.username}}</view>
   </view>
 

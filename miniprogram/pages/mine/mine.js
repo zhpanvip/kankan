@@ -16,6 +16,11 @@ Page({
     })
   },
 
+  setUserGrade: function (selectedGrade) {
+    this.data.userInfo.grade = selectedGrade;
+    this.setData({ userInfo: this.data.userInfo })
+  },
+
   toMyLike: function(view) {
     wx.navigateTo({
       url: `../my-collect/my-collect?type=1`

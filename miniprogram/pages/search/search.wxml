@@ -10,28 +10,31 @@
     </view>
 
     <view class="lable_container">
-      <view class="search_lable">
-        <text class="lable_text">年级</text>
-        <image class="lable_icon" src="../../images/icon/search_lable_icon.png"></image>
-      </view>
-      <view class="search_lable">
-        <text class="lable_text">字数</text>
-        <image class="lable_icon" src="../../images/icon/search_lable_icon.png"></image>
-      </view>
-      <view class="search_lable">
-        <text class="lable_text">体裁</text>
-        <image class="lable_icon" src="../../images/icon/search_lable_icon.png"></image>
-      </view>
+      <spinner_title class="search_lable" text="年级" isSelected="{{showGrade}}" bindtap="showGradePop"/>
+      <spinner_title class="search_lable" text="字数" isSelected="{{showCount}}" bindtap="showCountPop"/>
+      <spinner_title class="search_lable" text="体裁" isSelected="{{showType}}" bindtap="showTypePop"/>
     </view>
   </view>
+  
   <view class="split_line" />
 
-  <view class="grade_container">
-    <text wx:if="{{primarySchool.length>0}}" class="label_title">小学</text>
-    <lable_grid lables="{{primarySchool}}" />
-    <text wx:if="{{juniorSchool.length>0}}" class="label_title">初中</text>
-    <lable_grid lables="{{juniorSchool}}" />
-    <text wx:if="{{highSchool.length>0}}" class="label_title">高中</text>
-    <lable_grid lables="{{highSchool}}" />
+  <view wx:if="{{showGrade}}" class="pop_window_container">
+    <text wx:if="{gradeLabel.{primarySchool.length>0}}" class="label_title">小学</text>
+    <lable_grid lables="{{gradeLabel.primarySchool}}" />
+    <text wx:if="{{gradeLabel.juniorSchool.length>0}}" class="label_title">初中</text>
+    <lable_grid lables="{{gradeLabel.juniorSchool}}" />
+    <text wx:if="{{gradeLabel.highSchool.length>0}}" class="label_title">高中</text>
+    <lable_grid lables="{{gradeLabel.highSchool}}" />
   </view>
+
+  <view wx:if="{{showCount}}" class="pop_window_container">
+    <lable_grid lables="{{writingCountLabel}}" />
+  </view>
+
+  <view wx:if="{{showType}}" class="pop_window_container">
+    <lable_grid lables="{{typeLabel}}" />
+  </view>
+
+  <view wx:if="{{showGrade||showCount||showType}}" bindtap="hidePopWindow" class="pop_window_bg"></view>
+
 </view>

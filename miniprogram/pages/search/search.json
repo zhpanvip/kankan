@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "搜索作文",
   "usingComponents": {
-    "lable_grid": "/components/lable_grid/lable_grid"
+    "lable_grid": "/components/lable_grid/lable_grid",
+    "spinner_title": "/components/spinner_title/spinner_title"
   }
 }

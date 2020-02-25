@@ -1,6 +1,8 @@
 <!--components/lable_grid/lable_grid.wxml-->
 <view class="lable_container">
-  <block wx:for="{{lables}}">
-    <text class="{{item.isSelected?'lable_view_selected':'lable_view'}}">{{item.labelName}}</text>
+  <block wx:for="{{lables}}" wx:key="*this">
+    <text wx:key="{{index}}" 
+          wx:index="index" 
+          data-index="{{index}}" catchtap='_onItemClick' class="lable_view,{{ item.isSelected?'lable_view_selected':'lable_view_normal'}}">{{item.labelName}}</text>
   </block>
 </view>

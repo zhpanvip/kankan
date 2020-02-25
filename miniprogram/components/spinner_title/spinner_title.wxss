@@ -1,0 +1,19 @@
+/* components/labe_title/label_title.wxss */
+.spinner_title_container{
+  display: flex;
+  align-items: center;
+}
+.spinner_title {
+  color: #bfbfbf;
+  font-size: 32rpx;
+}
+
+.spinner_title_selected{
+  color: #409EFF;
+  font-size: 32rpx;
+}
+
+.spinner_title_icon {
+  width: 30rpx;
+  height: 30rpx;
+}

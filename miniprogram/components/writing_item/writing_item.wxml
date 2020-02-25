@@ -13,7 +13,7 @@
         <text class="wrtings_count_text">{{writing.thumbUpCount}}</text>
       </view>
       <view class="writing_lables" wx:key="*this">
-        <view class="lable" wx:for="{{writing.writingLabels}}">{{item}}</view>
+        <view class="lable" wx:for="{{writing.writingLabels}}" wx:key="*this">{{item}}</view>
       </view>
     </view>
   </view>

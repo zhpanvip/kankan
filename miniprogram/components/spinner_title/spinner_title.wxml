@@ -1,0 +1,5 @@
+<!--components/labe_title/label_title.wxml-->
+<view class="spinner_title_container">
+  <text class="{{isSelected?'spinner_title_selected':'spinner_title'}}">{{text}}</text>
+  <image class="spinner_title_icon" src="{{isSelected?'../../images/icon/search_lable_icon_selected.png':'../../images/icon/search_lable_icon.png'}}"></image>
+</view>
